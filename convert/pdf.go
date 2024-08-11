@@ -36,7 +36,7 @@ func PDF(filename string) {
 	pdf.Image(filename, 0, 0, &gopdf.Rect{W: width, H: height})
 
 	// PDF 저장
-	err = pdf.WritePdf("example.pdf")
+	err = pdf.WritePdf(filename + ".pdf")
 	if err != nil {
 		fmt.Println("Error saving PDF file:", err)
 		return
